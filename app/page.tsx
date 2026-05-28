@@ -1,14 +1,17 @@
-import Image from "next/image";
+import { Metadata } from "next";
+import TodoContainer from "./TodoContainer";
 
-export default async function Home() {
+export const metadata: Metadata = {
+  title: "Todo App",
+  description: "Simple todo management app",
+};
 
-  const res = await fetch("https://api.freeapi.app/api/v1/public/randomjokes/100")
-  const data = await res.json()
-  console.log(data)
-
-
-
+export default function Home() {
   return (
-    <h1 className="text-3xl font-bold">Home Page</h1>
+    <main className="min-h-screen bg-zinc-950 text-zinc-50">
+      <div className="container mx-auto px-4 py-12 max-w-2xl">
+        <TodoContainer />
+      </div>
+    </main>
   );
 }
