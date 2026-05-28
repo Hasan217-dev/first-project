@@ -91,7 +91,7 @@ export default function TodoItem({ todo }: TodoItemProps) {
         <button
           onClick={handleToggleComplete}
           disabled={loading}
-          className={`flex-shrink-0 w-6 h-6 rounded border-2 flex items-center justify-center transition ${
+          className={`shrink-0 w-6 h-6 rounded border-2 flex items-center justify-center transition ${
             completed
               ? "bg-green-900/30 border-green-600"
               : "border-zinc-700 hover:border-zinc-500"
@@ -123,7 +123,7 @@ export default function TodoItem({ todo }: TodoItemProps) {
           )}
         </div>
 
-        <div className="flex gap-2 flex-shrink-0">
+        <div className="flex gap-2 shrink-0">
           {isEditing ? (
             <>
               <button
